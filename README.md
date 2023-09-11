@@ -21,7 +21,7 @@ sudo docker run --rm --tty --interactive \
     --volume "$PWD:/srv/jekyll" \
     --publish "127.0.0.1:4000:4000" \
     "jekyll/jekyll:$JEKYLL_VERSION" \
-    bundle exec jekyll serve
+    bundle exec jekyll serve --host 0.0.0.0
 
 # Clear temporary files
 rm -rfv vendor _site
