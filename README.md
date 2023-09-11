@@ -1,13 +1,34 @@
+# Salon3355
 
+## Quickstart
 
 ```bash
-sudo apt-get install ruby ruby-dev jekyll bundler;
-bundle install
-```
+PROJECT="salon3355"
+JEKYLL_VERSION="4.2.2"
 
+# Install the required gems
+sudo docker run --rm \
+    --name "$PROJECT-bundle-install" \
+    --env BUNDLE_PATH="vendor/bundle" \
+    --volume "$PWD:/srv/jekyll" \
+    "jekyll/jekyll:$JEKYLL_VERSION" \
+    bundle install
+
+# Run the development environment on port 4000
+sudo docker run --rm --tty --interactive \
+    --name "$PROJECT-jekyll-serve" \
+    --env BUNDLE_PATH="vendor/bundle" \
+    --volume "$PWD:/srv/jekyll" \
+    --publish "127.0.0.1:4000:4000" \
+    "jekyll/jekyll:$JEKYLL_VERSION" \
+    bundle exec jekyll serve
+
+# Clear temporary files
+rm -rfv vendor _site
+```
 
 ## Links
 
 * https://docs.github.com/en/pages/quickstart
 * https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
-
+* https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y
