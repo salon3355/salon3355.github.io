@@ -33,3 +33,6 @@ sudo rm -rfv vendor _site
 * https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
 * https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y
 * https://github.com/orgs/community/discussions/22795
+* https://pixabay.com/photos/nail-art-manicure-nails-nail-polish-5653459/
+* https://pixabay.com/photos/eyelash-eyeball-eyebrow-mascara-3300338/
+* https://pixabay.com/photos/woman-girl-makeup-lashes-female-1677558/
