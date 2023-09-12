@@ -32,3 +32,4 @@ rm -rfv vendor _site
 * https://docs.github.com/en/pages/quickstart
 * https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll
 * https://stackoverflow.com/questions/6317980/you-have-already-activated-x-but-your-gemfile-requires-y
+* https://github.com/orgs/community/discussions/22795
