@@ -1,0 +1,30 @@
+<!-- Start About Section -->
+<section class="bg-one about section section-bg" id="pricing">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<!-- section title -->
+				<div class="title text-center wow fadeIn" data-wow-duration="1500ms">
+					<h2>Cennik</h2>
+					<div class="border"></div>
+				</div>
+				<!-- /section title -->
+			</div>
+
+    <table class="table table-hover table-light">
+        <tbody>
+            {% for price in site.data.prices %}
+                <tr>
+                    <td></td>
+                    <td>{{ price.title | upcase }}</td>
+                    <td></td>
+                    <td class="price">{{ price.price }} zł</td>
+                    <td></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+		</div> <!-- End row -->
+	</div> <!-- End container -->
+</section> <!-- End section -->
