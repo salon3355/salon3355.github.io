@@ -13,7 +13,9 @@
 		<div class="row mx-auto filtr-container">
 			{% for image in site.data.images %}
 				<div class="col-6 col-lg-3 p-2">
-					<img src="{{ image.path }}" class="img-thumbnail">
+					<a class="spotlight" href="{{ image.path }}">
+						<img src="{{ image.path }}" class="img-thumbnail">
+					</a>
 				</div>
 			{% endfor %}
 		</div>
