@@ -24,7 +24,7 @@ sudo docker run --rm --tty --interactive \
     bundle exec jekyll serve --host 0.0.0.0
 
 # Clear temporary files
-rm -rfv vendor _site
+sudo rm -rfv vendor _site
 ```
 
 ## Links

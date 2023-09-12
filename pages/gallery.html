@@ -1,0 +1,15 @@
+---
+layout: page
+title: Galeria
+permalink: /gallery/
+order: 200
+images:
+  - path: /images/IMG_20230911_235056.jpg
+  - path: /images/IMG_20230826_131349.jpg
+  - path: /images/FB_IMG_1694380122208.jpg
+  - path: /images/IMG_20230826_131404.jpg
+---
+
+{% for image in page.images %}
+    <img class="col-4" src="{{ image.path }}" class="img-thumbnail">
+{% endfor %}
