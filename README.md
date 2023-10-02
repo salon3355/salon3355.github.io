@@ -38,4 +38,5 @@ sudo rm -rfv vendor _site
 * https://pixabay.com/photos/nail-art-manicure-nails-nail-polish-5653459/
 * https://pixabay.com/photos/eyelash-eyeball-eyebrow-mascara-3300338/
 * https://pixabay.com/photos/woman-girl-makeup-lashes-female-1677558/
+* https://pixabay.com/illustrations/ai-generated-clouds-stars-cloudy-8261545/
 * https://themefisher.com/products/meghna-bootstrap
