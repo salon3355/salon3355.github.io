@@ -1,4 +1,4 @@
-<!-- Start Gallery Section -->
+<!------------------------------------------------------------------------------ Gallery -->
 
 <section class="portfolio section bg-one" id="gallery">
 	<div class="container">
@@ -11,15 +11,20 @@
 			</div>
 		</div>
 		<div class="row mx-auto filtr-container">
-			{% for image in site.data.images %}
-				<div class="col-6 col-lg-3 p-2">
-					<a class="spotlight" href="{{ image.path }}">
-						<img src="{{ image.path }}" class="img-thumbnail">
-					</a>
-				</div>
+			{% comment %}
+				TODO: This is an ugly workaround for the problem of
+				missing `site.gallery` attribute for gallery collection!
+				https://jekyllrb.com/docs/collections/
+			{% endcomment %}
+			{% for collection in site.collections | where: "label", "gallery" %}
+				{% for file in collection.files %}
+					<div class="col-6 col-lg-3 p-2">
+						<a class="spotlight" href="{{ file.path | remove_first:'_' }}">
+							<img src="{{ file.path | remove_first:'_' }}" class="img-thumbnail">
+						</a>
+					</div>
+				{% endfor %}
 			{% endfor %}
 		</div>
 	</div>
 </section>
-<!-- End Gallery Section -->
-

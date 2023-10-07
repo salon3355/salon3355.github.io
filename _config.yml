@@ -1,2 +1,6 @@
 title: Paula Studio
 markdown: kramdown
+collections:
+  gallery:
+    output: true
+    sort_by: path
