@@ -16,14 +16,14 @@
 				missing `site.gallery` attribute for gallery collection!
 				https://jekyllrb.com/docs/collections/
 			{% endcomment %}
-			{% for collection in site.collections | where: "label", "gallery" %}
-				{% for file in collection.files | sort: "name" %}
-					<div class="col-6 col-lg-3 p-2">
-						<a class="spotlight" href="{{ file.path | remove_first:'_' }}">
-							<img src="{{ file.path | remove_first:'_' }}" class="img-thumbnail">
-						</a>
-					</div>
-				{% endfor %}
+			{% assign gallery = site.collections | where:"label","gallery" | first %}
+			{% assign images = gallery.files | sort:"path" %}
+			{% for image in images %}
+				<div class="col-6 col-lg-3 p-2">
+					<a class="spotlight" href="{{ image.path | remove_first:'_' }}">
+						<img src="{{ image.path | remove_first:'_' }}" class="img-thumbnail">
+					</a>
+				</div>
 			{% endfor %}
 		</div>
 	</div>
